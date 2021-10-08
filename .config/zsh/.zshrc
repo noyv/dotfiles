@@ -23,6 +23,8 @@ zinit light-mode for \
 
 zinit ice lucid wait='!0'
 zinit light skywind3000/z.lua
+zinit ice lucid wait='!0'
+zinit light zsh-users/zsh-history-substring-search
 zinit ice lucid wait='0' atinit='zpcompinit'
 zinit light zdharma/fast-syntax-highlighting
 zinit ice lucid wait="0" atload='_zsh_autosuggest_start'
@@ -30,8 +32,12 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice lucid wait='0'
 zinit light zsh-users/zsh-completions
 
-zinit snippet OMZ::plugins/command-not-found/command-not-found.plugin.zsh
+zinit snippet OMZ::lib/completion.zsh
+zinit snippet OMZ::lib/history.zsh
+zinit snippet OMZ::lib/key-bindings.zsh
 
-export LC_CTYPE=en_US.UTF-8
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 eval "$(starship init zsh)"
 
