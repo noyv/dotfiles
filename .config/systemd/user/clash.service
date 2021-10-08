@@ -1,0 +1,9 @@
+[Unit]
+Description=run clash
+
+[Service]
+Type=Simple
+ExecStart=clash
+
+[Install]
+WantedBy=default.target
