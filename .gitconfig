@@ -1,0 +1,9 @@
+[user]
+        name = noyv
+        email = mayourt@foxmail.com
+[http]
+        # proxy = http://127.0.0.1:7890
+[https]
+        # proxy = http://127.0.0.1:7890
+[url "https://github.com.cnpmjs.org/"]
+	insteadof = https://github.com/
