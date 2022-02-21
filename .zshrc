@@ -4,11 +4,13 @@ plugins=(z.lua fzf)
 
 source $ZSH/oh-my-zsh.sh
 
-if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
+export EDITOR='vim'
+
+if [ "$UID" -eq 0 ]; then
+   export PROMPT="%F{135}%n%f@%F{166}%m%f %F{118}%~%f %# "
 else
-   export EDITOR='mvim'
+   export PROMPT="%F{135}%n%f@%F{166}%m%f %F{118}%~%f \$ "
 fi
 
-eval "$(starship init zsh)"
-eval "$(fnm env)"
+eval "$(fnm env --use-on-cd)"
+
