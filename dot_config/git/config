@@ -1,0 +1,7 @@
+[https]
+	proxy = http://127.0.0.1:7890
+[http]
+	proxy = http://127.0.0.1:7890
+[user]
+	email = renought@gmail.com
+	name = noyv
