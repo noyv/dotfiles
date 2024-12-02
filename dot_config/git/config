@@ -5,3 +5,5 @@
 [user]
 	email = renought@gmail.com
 	name = noyv
+[push]
+	autoSetupRemote = true
